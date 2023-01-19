@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+.App{
+  width: 100%;
+}
+.container{
+  max-width: 1200px;
+}
+.Posts {
+  //width: 100%;
+}
+
+.post {
+  display: flex;
+  padding: 15px;
+  border: 2px solid teal;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__content{
+  padding: 0 10px;
+}
+
+.Posts-title {
+  text-align: center;
+}
+
+// Анимация с помощью react transition group
+.post-enter {
+  transform: translateX(-350px);
+}
+.post-enter-active {
+  transform: translateX(0);
+  transition: all 400ms ease-in;
+}
+.post-exit {
+  opacity: 1;
+}
+.post-exit-active {
+  transform: translateX(-100%);
+  transition: all 400ms ease-in;
+}
+//Pagination
+.pagination-wrapper{
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination-item{
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid teal;
+  cursor: pointer;
+  &.active{
+    background-color: teal;
+    color: #fff;
+  }
+}
+
+.nav{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0;
+    text-transform: uppercase;
+  }
+}
+.footer{
+  height: 50px;
+  background-color: #000;
+}
+.not-found{
+  min-height: 50vh;
+  position: relative;
+  h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.post__buttons{
+  display: flex;
+  column-gap: 10px;
+}
+.post-page{
+  min-height: 50vh;
+}
